@@ -1,88 +1,115 @@
 import User from "../models/userModel.js";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
+// ========================= REGISTER =========================
 export const UserRegister = async (req, res, next) => {
   try {
-    //accpect and destructer data
-    const { fullName, email, mobileNumber, password, gender} =
-      req.body;
-    if (
-      !fullName ||
-      !email ||
-      !mobileNumber ||
-      !password ||
-      !gender 
-      
-    ) {
-      const error = new Error("All feild is required");
-      error.statusCode = 400;
-      return next(error);
-    }
-    console.log({ fullName, email, mobileNumber, password, gender });
+    const { fullName, email, mobileNumber, password, gender, role } = req.body;
 
-    //cheak duplicate user before registation
+    // Validation
+    if (!fullName || !email || !mobileNumber || !password || !gender) {
+      return res.status(400).json({
+        success: false,
+        message: "All fields are required",
+      });
+    }
+
+    // Check duplicate user
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      const error = new Error("Email alerdy register");
-      error.statusCode = 409;
-      return next(error);
+      return res.status(409).json({
+        success: false,
+        message: "Email already registered",
+      });
     }
-    //encrypt,hashing password
+
+    // Hash password
     const salt = await bcrypt.genSalt(10);
     const hashPassword = await bcrypt.hash(password, salt);
 
-    //save data database
-
-    const newuser = await User.create({
+    // Create new user
+    const newUser = await User.create({
       fullName,
       email,
       mobileNumber,
       password: hashPassword,
       gender,
-      
+      role: role || "student", // default student
     });
 
-    //send req to frontend //Seccessfull data✅
-    console.log(newuser);
-
-    res.status(201).json({ message: "Registation seccessfull" });
+    return res.status(201).json({
+      success: true,
+      message: "Registration successful",
+      data: {
+        id: newUser._id,
+        fullName: newUser.fullName,
+        email: newUser.email,
+        mobileNumber: newUser.mobileNumber,
+        gender: newUser.gender,
+        role: newUser.role,
+      },
+    });
   } catch (error) {
     next(error);
   }
 };
 
-// Login--------
+// ========================= LOGIN =========================
 export const UserLogin = async (req, res, next) => {
   try {
-    //Fetch data fronted
     const { email, password } = req.body;
 
+    // Validation
     if (!email || !password) {
-      const error = new Error("All feilds reuired");
-      error.statusCode = 400;
-      return next(error);
+      return res.status(400).json({
+        success: false,
+        message: "Email and password required",
+      });
     }
-    //check is user regi\der or not
-    const existingUser = await User.findOne({ email });
-    if (!existingUser) {
-      const error = new Error("Email already registerd");
-      error.statusCode = 401;
-      return next(error);
-    }
-    //verfy the password
 
-    const isVerified = await bcrypt.compare(password, existingUser.password);
+    // Find user
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(401).json({
+        success: false,
+        message: "User not registered",
+      });
+    }
+
+    // Verify password
+    const isVerified = await bcrypt.compare(password, user.password);
     if (!isVerified) {
-      const error = new Error("Email didn't match");
-      error.statusCode = 401;
-      return next(error);
+      return res.status(401).json({
+        success: false,
+        message: "Invalid password",
+      });
     }
-   
 
-    //send message to frontend
-    res.status(200).json({ message: "Login Successfull", data: existingUser });
+    // Generate JWT Token
+    const token = jwt.sign(
+      {
+        id: user._id,
+        role: user.role,
+        email: user.email,
+      },
+      process.env.JWT_SECRET,
+      { expiresIn: "7d" }
+    );
 
-    //End
+    return res.status(200).json({
+      success: true,
+      message: "Login successful",
+      token: token,
+      data: {
+        id: user._id,
+        fullName: user.fullName,
+        email: user.email,
+        mobileNumber: user.mobileNumber,
+        gender: user.gender,
+        role: user.role,
+      },
+    });
   } catch (error) {
     next(error);
   }
