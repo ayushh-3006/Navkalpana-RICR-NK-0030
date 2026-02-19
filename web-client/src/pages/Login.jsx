@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import api from "../config/Api.jsx";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from  "../context/AuthContext.jsx"
 
 const Login = () => {
+  const navigate = useNavigate();
+  // const { login } = useContext(AuthContext);
+  const {login} = useContext(AuthContext);
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -23,7 +29,9 @@ const Login = () => {
   const validate = () => {
     let Error = {};
 
-    if (!/^[\w\.]+@(gmail|outlook|ricr|yahoo)\.(com|in|co.in)$/.test(formData.email)) {
+    if (
+      !/^[\w\.]+@(gmail|outlook|ricr|yahoo)\.(com|in|co.in)$/.test(formData.email)
+    ) {
       Error.email = "Use Proper Email Format";
     }
 
@@ -47,7 +55,26 @@ const Login = () => {
 
     try {
       const res = await api.post("/auth/login", formData);
+
       toast.success(res.data.message);
+
+      // backend should return: token + data(user)
+      const userData = res.data.data;
+      const token = res.data.token;
+
+      // Save in context + localStorage
+      login(userData, token);
+
+      // Role Based Redirect
+      if (userData.role === "student") {
+        navigate("/student/dashboard");
+      } else if (userData.role === "teacher") {
+        navigate("/teacher/dashboard");
+      } else if (userData.role === "admin") {
+        navigate("/admin/dashboard");
+      } else {
+        toast.error("Invalid Role Found!");
+      }
     } catch (error) {
       toast.error(error.response?.data?.message || "Login Failed");
     } finally {
@@ -57,30 +84,25 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex">
-
       {/* Left Side */}
       <div className="hidden md:flex w-1/2 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 items-center justify-center text-white p-10">
         <div className="max-w-md">
-          <h1 className="text-4xl font-bold mb-4">
-            Welcome Back 👋
-          </h1>
+          <h1 className="text-4xl font-bold mb-4">Welcome Back 👋</h1>
           <p className="text-lg opacity-90">
-            Login to access your dashboard and continue building something amazing.
+            Login to access your dashboard and continue building something
+            amazing.
           </p>
         </div>
       </div>
 
       {/* Right Side */}
       <div className="flex w-full md:w-1/2 items-center justify-center bg-gray-100 px-6">
-
         <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-2xl">
-
           <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
             Login to Your Account
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-5">
-
             {/* Email */}
             <div>
               <label className="text-sm font-medium text-gray-600">
@@ -94,9 +116,11 @@ const Login = () => {
                 onChange={handleChange}
                 placeholder="example@gmail.com"
                 className={`w-full mt-1 px-4 py-2 rounded-lg border outline-none transition duration-200 
-                ${validationError.email
-                  ? "border-red-500 focus:ring-2 focus:ring-red-300"
-                  : "border-gray-300 focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400"}`}
+                ${
+                  validationError.email
+                    ? "border-red-500 focus:ring-2 focus:ring-red-300"
+                    : "border-gray-300 focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400"
+                }`}
               />
 
               {validationError.email && (
@@ -120,9 +144,11 @@ const Login = () => {
                   onChange={handleChange}
                   placeholder="Enter your password"
                   className={`w-full px-4 py-2 rounded-lg border outline-none transition duration-200 
-                  ${validationError.password
-                    ? "border-red-500 focus:ring-2 focus:ring-red-300"
-                    : "border-gray-300 focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400"}`}
+                  ${
+                    validationError.password
+                      ? "border-red-500 focus:ring-2 focus:ring-red-300"
+                      : "border-gray-300 focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400"
+                  }`}
                 />
 
                 <span
@@ -157,13 +183,14 @@ const Login = () => {
               type="submit"
               disabled={isLoading}
               className={`w-full py-2 rounded-lg font-semibold text-white transition duration-300 
-              ${isLoading
-                ? "bg-gray-400 cursor-not-allowed"
-                : "bg-indigo-600 hover:bg-indigo-700 active:scale-95"}`}
+              ${
+                isLoading
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-indigo-600 hover:bg-indigo-700 active:scale-95"
+              }`}
             >
               {isLoading ? "Logging in..." : "Login"}
             </button>
-
           </form>
         </div>
       </div>
