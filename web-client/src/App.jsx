@@ -5,6 +5,7 @@ import Home from "./pages/Home.jsx";
 import Register from "./pages/Register.jsx";
 import Login from "./pages/Login.jsx";
 import { Toaster } from "react-hot-toast";
+import AutoLogout from "./components/AutoLogout.jsx";
 
 // Dashboards
 import StudentDashboard from "./pages/dashboards/student/StudentDashboard.jsx";
@@ -26,6 +27,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <Toaster />
+        <AutoLogout> 
         <Header />
 
         <Routes>
@@ -62,6 +64,7 @@ const App = () => {
             }
           />
         </Routes>
+        </AutoLogout>
       </BrowserRouter>
     </>
   );
