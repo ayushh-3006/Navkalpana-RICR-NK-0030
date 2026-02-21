@@ -1,0 +1,168 @@
+{
+  "title": "Adaptive Quiz: React Hooks",
+  "topicFocus": "React Hooks",
+  "difficulty": "easy",
+  "timeLimitSec": 600,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "easy",
+      "question": "Which hook is used to manage state in functional components?",
+      "options": ["useEffect", "useState", "useMemo", "useRef"],
+      "correctAnswer": ["useState"],
+      "explanation": "useState is used to create and update state.",
+      "tags": ["useState"]
+    },
+    {
+      "id": "q2",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "easy",
+      "question": "useEffect runs after:",
+      "options": ["Render", "Before render", "Compilation", "Unmount only"],
+      "correctAnswer": ["Render"],
+      "explanation": "useEffect runs after render.",
+      "tags": ["useEffect"]
+    },
+    {
+      "id": "q3",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "easy",
+      "question": "Which hook stores mutable value without re-render?",
+      "options": ["useState", "useRef", "useMemo", "useEffect"],
+      "correctAnswer": ["useRef"],
+      "explanation": "useRef does not trigger re-render.",
+      "tags": ["useRef"]
+    },
+    {
+      "id": "q4",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "easy",
+      "question": "Dependency array in useEffect is used to:",
+      "options": ["Style components", "Control when effect runs", "Create routes", "Create context"],
+      "correctAnswer": ["Control when effect runs"],
+      "explanation": "Dependencies control effect execution.",
+      "tags": ["useEffect"]
+    },
+    {
+      "id": "q5",
+      "type": "short",
+      "topic": "React Hooks",
+      "difficulty": "easy",
+      "question": "What is a Hook in React?",
+      "correctAnswer": ["Functions that let you use React features in functional components"],
+      "explanation": "Hooks allow state and lifecycle features in functions.",
+      "tags": ["hooks"]
+    },
+    {
+      "id": "q6",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "easy",
+      "question": "Hooks must be called:",
+      "options": ["Inside loops", "Inside conditions", "At top level", "Inside functions"],
+      "correctAnswer": ["At top level"],
+      "explanation": "Hooks must be called at top level.",
+      "tags": ["rules-of-hooks"]
+    },
+    {
+      "id": "q7",
+      "type": "scenario",
+      "topic": "React Hooks",
+      "difficulty": "easy",
+      "question": "How do you run useEffect only once?",
+      "correctAnswer": ["[]"],
+      "explanation": "Empty dependency array runs once.",
+      "tags": ["useEffect"]
+    },
+    {
+      "id": "q8",
+      "type": "code_output",
+      "topic": "React Hooks",
+      "difficulty": "easy",
+      "question": "What will be logged?\nlet x=1; console.log(x++); console.log(x);",
+      "correctAnswer": ["1 and 2"],
+      "explanation": "Post increment prints old value first.",
+      "tags": ["js"]
+    },
+    {
+      "id": "q9",
+      "type": "mcq_multi",
+      "topic": "React Hooks",
+      "difficulty": "easy",
+      "question": "Select built-in hooks:",
+      "options": ["useState", "useFetch", "useEffect", "useMemo"],
+      "correctAnswer": ["useState", "useEffect", "useMemo"],
+      "explanation": "useFetch is not built-in.",
+      "tags": ["hooks"]
+    },
+    {
+      "id": "q10",
+      "type": "short",
+      "topic": "React Hooks",
+      "difficulty": "easy",
+      "question": "Why use useMemo?",
+      "correctAnswer": ["To memoize expensive calculations"],
+      "explanation": "useMemo prevents unnecessary recalculation.",
+      "tags": ["useMemo"]
+    },
+    {
+      "id": "q11",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "easy",
+      "question": "Which hook replaces componentDidMount?",
+      "options": ["useEffect", "useState", "useMemo", "useRef"],
+      "correctAnswer": ["useEffect"],
+      "explanation": "useEffect replaces lifecycle methods.",
+      "tags": ["useEffect"]
+    },
+    {
+      "id": "q12",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "easy",
+      "question": "Which hook optimizes performance?",
+      "options": ["useState", "useEffect", "useMemo", "useRef"],
+      "correctAnswer": ["useMemo"],
+      "explanation": "useMemo optimizes performance.",
+      "tags": ["useMemo"]
+    },
+    {
+      "id": "q13",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "easy",
+      "question": "Which hook gives reference to DOM?",
+      "options": ["useState", "useEffect", "useRef", "useMemo"],
+      "correctAnswer": ["useRef"],
+      "explanation": "useRef accesses DOM elements.",
+      "tags": ["useRef"]
+    },
+    {
+      "id": "q14",
+      "type": "short",
+      "topic": "React Hooks",
+      "difficulty": "easy",
+      "question": "What happens if dependency array is missing?",
+      "correctAnswer": ["Effect runs on every render"],
+      "explanation": "Without dependencies, effect runs every render.",
+      "tags": ["useEffect"]
+    },
+    {
+      "id": "q15",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "easy",
+      "question": "Which hook is used for side effects?",
+      "options": ["useState", "useEffect", "useMemo", "useRef"],
+      "correctAnswer": ["useEffect"],
+      "explanation": "useEffect handles side effects.",
+      "tags": ["useEffect"]
+    }
+  ]
+}

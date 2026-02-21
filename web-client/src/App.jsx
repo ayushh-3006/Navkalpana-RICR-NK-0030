@@ -7,27 +7,28 @@ import Login from "./pages/Login.jsx";
 import { Toaster } from "react-hot-toast";
 import AutoLogout from "./components/AutoLogout.jsx";
 
+import ProtectedRoute from "./routes/ProtectedRoute.jsx";
+
 // Dashboards
 import StudentDashboard from "./pages/dashboards/student/StudentDashboard.jsx";
 import AdminDashboard from "./pages/dashboards/admin/AdminDashboard.jsx";
 
 // Student Nested Pages
-import AdaptiveQuiz from "./pages/dashboards/student/AdaptiveQuiz.jsx"
-import Assignment from "./pages/dashboards/student/AssignmentPage.jsx";
-import InterviewPrep from  "./pages/dashboards/student/Interviewprepration.jsx"
-import QuizResult from "./pages/dashboards/student/Interviewprepration.jsx"
-import ResumeAnalysis from "./pages/dashboards/student/ResumeAnalysis.jsx"
-import ResumeUpload from "./pages/dashboards/student/ResumeUpload.jsx"
+import AdaptiveQuiz from "./pages/dashboards/student/AdaptiveQuiz.jsx";
+import QuizAttempt from "./pages/dashboards/student/QuizAttempt.jsx";
+import QuizResult from "./pages/dashboards/student/QuizResult.jsx";
+import QuizHistory from "./pages/dashboards/student/QuizHistory.jsx";
 
-// Protected Route (or Auth wrapper)
-import { AuthContext } from "./context/AuthContext.jsx";
+import Assignment from "./pages/dashboards/student/AssignmentPage.jsx";
+import InterviewPrep from "./pages/dashboards/student/Interviewprepration.jsx";
+import ResumeAnalysis from "./pages/dashboards/student/ResumeAnalysis.jsx";
+import ResumeUpload from "./pages/dashboards/student/ResumeUpload.jsx";
 
 const App = () => {
   return (
-    <>
-      <BrowserRouter>
-        <Toaster />
-        <AutoLogout> 
+    <BrowserRouter>
+      <Toaster />
+      <AutoLogout>
         <Header />
 
         <Routes>
@@ -40,16 +41,28 @@ const App = () => {
           <Route
             path="/student/dashboard"
             element={
-              <AuthContext role="student">
+              <ProtectedRoute role="student">
                 <StudentDashboard />
-              </AuthContext>
+              </ProtectedRoute>
             }
           >
             {/* Nested Routes */}
+            <Route
+              index
+              element={
+                <div className="text-white">
+                  Welcome to Student Dashboard ✅
+                </div>
+              }
+            />
             <Route path="adaptive-quiz" element={<AdaptiveQuiz />} />
+            <Route path="quiz-history" element={<QuizHistory />} />
+
+            {/* ✅ Dynamic quiz routes */}
+            <Route path="quiz/:quizId" element={<QuizAttempt />} />
+          <Route path="quiz-result/:attemptId" element={<QuizResult />} />
             <Route path="assignment" element={<Assignment />} />
             <Route path="interview-prep" element={<InterviewPrep />} />
-            <Route path="quiz-result" element={<QuizResult />} />
             <Route path="resume-analysis" element={<ResumeAnalysis />} />
             <Route path="resume-upload" element={<ResumeUpload />} />
           </Route>
@@ -58,15 +71,14 @@ const App = () => {
           <Route
             path="/admin/dashboard"
             element={
-              <AuthContext role="admin">
+              <ProtectedRoute role="admin">
                 <AdminDashboard />
-              </AuthContext>
+              </ProtectedRoute>
             }
           />
         </Routes>
-        </AutoLogout>
-      </BrowserRouter>
-    </>
+      </AutoLogout>
+    </BrowserRouter>
   );
 };
 

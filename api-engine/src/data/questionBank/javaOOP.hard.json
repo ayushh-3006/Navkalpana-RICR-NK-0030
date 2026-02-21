@@ -1,0 +1,150 @@
+{
+  "title": "Adaptive Quiz: Java OOP",
+  "topicFocus": "Java OOP",
+  "difficulty": "hard",
+  "timeLimitSec": 900,
+  "questions": [
+    {
+      "id": "joh1",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "hard",
+      "question": "Which is TRUE about dynamic method dispatch?",
+      "options": ["Compile-time binding", "Runtime binding for overridden methods", "Only for overloading", "Only for static methods"],
+      "correctAnswer": ["Runtime binding for overridden methods"],
+      "explanation": "Dynamic dispatch selects overridden method at runtime."
+    },
+    {
+      "id": "joh2",
+      "type": "short",
+      "topic": "Java OOP",
+      "difficulty": "hard",
+      "question": "Explain Liskov Substitution Principle in 1 line.",
+      "correctAnswer": ["Child class should be substitutable for parent without breaking behavior"],
+      "explanation": "LSP ensures subtype works where parent is expected."
+    },
+    {
+      "id": "joh3",
+      "type": "scenario",
+      "topic": "Java OOP",
+      "difficulty": "hard",
+      "question": "Why prefer interface over abstract class sometimes?",
+      "correctAnswer": ["Multiple inheritance of type + loose coupling"],
+      "explanation": "Interfaces allow flexible design and loose coupling."
+    },
+    {
+      "id": "joh4",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "hard",
+      "question": "What is covariant return type?",
+      "options": ["Return type must match exactly", "Child return type allowed in overriding", "Return type must be void", "Return type must be Object"],
+      "correctAnswer": ["Child return type allowed in overriding"],
+      "explanation": "Overriding can return subtype of original return type."
+    },
+    {
+      "id": "joh5",
+      "type": "mcq_multi",
+      "topic": "Java OOP",
+      "difficulty": "hard",
+      "question": "Which are SOLID principles?",
+      "options": ["Single Responsibility", "Open/Closed", "Dependency Inversion", "Fast Execution"],
+      "correctAnswer": ["Single Responsibility", "Open/Closed", "Dependency Inversion"],
+      "explanation": "Fast Execution is not SOLID."
+    },
+    {
+      "id": "joh6",
+      "type": "scenario",
+      "topic": "Java OOP",
+      "difficulty": "hard",
+      "question": "How to prevent immutability breaking in a class with List field?",
+      "correctAnswer": ["Use defensive copy in constructor/getter"],
+      "explanation": "Return copies to prevent external modification."
+    },
+    {
+      "id": "joh7",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "hard",
+      "question": "Which is TRUE about final methods?",
+      "options": ["Can be overridden", "Cannot be overridden", "Cannot be called", "Only static"],
+      "correctAnswer": ["Cannot be overridden"],
+      "explanation": "final method prevents overriding."
+    },
+    {
+      "id": "joh8",
+      "type": "short",
+      "topic": "Java OOP",
+      "difficulty": "hard",
+      "question": "Explain polymorphism in terms of reference in 1 line.",
+      "correctAnswer": ["Parent reference can refer to child object and call overridden methods"],
+      "explanation": "This enables runtime polymorphism."
+    },
+    {
+      "id": "joh9",
+      "type": "scenario",
+      "topic": "Java OOP",
+      "difficulty": "hard",
+      "question": "How to implement Singleton safely in Java?",
+      "correctAnswer": ["Use enum singleton or double-checked locking"],
+      "explanation": "Enum is simplest safe singleton."
+    },
+    {
+      "id": "joh10",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "hard",
+      "question": "What is tight coupling?",
+      "options": ["Classes highly dependent on each other", "Classes independent", "Only one class", "Using interfaces"],
+      "correctAnswer": ["Classes highly dependent on each other"],
+      "explanation": "Tight coupling reduces flexibility."
+    },
+    {
+      "id": "joh11",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "hard",
+      "question": "Which pattern uses composition to add behavior dynamically?",
+      "options": ["Singleton", "Decorator", "Factory", "Observer"],
+      "correctAnswer": ["Decorator"],
+      "explanation": "Decorator adds behavior using composition."
+    },
+    {
+      "id": "joh12",
+      "type": "scenario",
+      "topic": "Java OOP",
+      "difficulty": "hard",
+      "question": "You want to avoid multiple if-else for different behaviors. What can you use?",
+      "correctAnswer": ["Strategy pattern"],
+      "explanation": "Strategy encapsulates different behaviors."
+    },
+    {
+      "id": "joh13",
+      "type": "short",
+      "topic": "Java OOP",
+      "difficulty": "hard",
+      "question": "What is abstraction in 1 line?",
+      "correctAnswer": ["Showing only essential features and hiding implementation details"],
+      "explanation": "Abstraction focuses on what, not how."
+    },
+    {
+      "id": "joh14",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "hard",
+      "question": "What is dependency injection?",
+      "options": ["Creating object inside class", "Providing dependencies from outside", "Deleting objects", "Using static everywhere"],
+      "correctAnswer": ["Providing dependencies from outside"],
+      "explanation": "DI reduces coupling by injecting dependencies."
+    },
+    {
+      "id": "joh15",
+      "type": "scenario",
+      "topic": "Java OOP",
+      "difficulty": "hard",
+      "question": "How to design for loose coupling?",
+      "correctAnswer": ["Program to interfaces, not implementations"],
+      "explanation": "Interfaces + DI reduce coupling."
+    }
+  ]
+}

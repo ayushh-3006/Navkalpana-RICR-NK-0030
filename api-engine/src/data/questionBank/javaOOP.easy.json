@@ -1,0 +1,155 @@
+{
+  "title": "Adaptive Quiz: Java OOP",
+  "topicFocus": "Java OOP",
+  "difficulty": "easy",
+  "timeLimitSec": 600,
+  "questions": [
+    {
+      "id": "joe1",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "easy",
+      "question": "OOP stands for:",
+      "options": ["Object Oriented Programming", "Only One Program", "Object Optional Program", "Open Output Process"],
+      "correctAnswer": ["Object Oriented Programming"],
+      "explanation": "OOP means object oriented programming."
+    },
+    {
+      "id": "joe2",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "easy",
+      "question": "Which keyword is used to create object in Java?",
+      "options": ["class", "new", "create", "this"],
+      "correctAnswer": ["new"],
+      "explanation": "new keyword creates object."
+    },
+    {
+      "id": "joe3",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "easy",
+      "question": "Which one is NOT an OOP principle?",
+      "options": ["Encapsulation", "Inheritance", "Compilation", "Polymorphism"],
+      "correctAnswer": ["Compilation"],
+      "explanation": "Compilation is not OOP principle."
+    },
+    {
+      "id": "joe4",
+      "type": "short",
+      "topic": "Java OOP",
+      "difficulty": "easy",
+      "question": "What is encapsulation (1 line)?",
+      "correctAnswer": ["Binding data and methods together and hiding internal details"],
+      "explanation": "Encapsulation hides data using private and getters/setters."
+    },
+    {
+      "id": "joe5",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "easy",
+      "question": "Which access modifier gives most restricted access?",
+      "options": ["public", "protected", "default", "private"],
+      "correctAnswer": ["private"],
+      "explanation": "private is most restricted."
+    },
+    {
+      "id": "joe6",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "easy",
+      "question": "Inheritance means:",
+      "options": ["One class acquiring properties of another", "Hiding data", "Multiple objects", "Database join"],
+      "correctAnswer": ["One class acquiring properties of another"],
+      "explanation": "Inheritance allows reuse via extends."
+    },
+    {
+      "id": "joe7",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "easy",
+      "question": "Polymorphism means:",
+      "options": ["Many forms", "Single form", "Only data", "Only methods"],
+      "correctAnswer": ["Many forms"],
+      "explanation": "Polymorphism means many forms."
+    },
+    {
+      "id": "joe8",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "easy",
+      "question": "Method overloading is:",
+      "options": ["Same method name different params", "Same method name same params", "Different methods same params", "Not possible"],
+      "correctAnswer": ["Same method name different params"],
+      "explanation": "Overloading differs by parameter list."
+    },
+    {
+      "id": "joe9",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "easy",
+      "question": "Method overriding requires:",
+      "options": ["Same name and parameters", "Different name", "Different class only", "Static methods only"],
+      "correctAnswer": ["Same name and parameters"],
+      "explanation": "Overriding uses same signature in child class."
+    },
+    {
+      "id": "joe10",
+      "type": "short",
+      "topic": "Java OOP",
+      "difficulty": "easy",
+      "question": "What is an object (1 line)?",
+      "correctAnswer": ["Instance of a class"],
+      "explanation": "Object is instance created from class."
+    },
+    {
+      "id": "joe11",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "easy",
+      "question": "Which keyword is used for inheritance?",
+      "options": ["implements", "extends", "inherits", "superclass"],
+      "correctAnswer": ["extends"],
+      "explanation": "extends is used for class inheritance."
+    },
+    {
+      "id": "joe12",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "easy",
+      "question": "Abstract class can have:",
+      "options": ["Only abstract methods", "Abstract + non-abstract methods", "Only variables", "No methods"],
+      "correctAnswer": ["Abstract + non-abstract methods"],
+      "explanation": "Abstract class can have both."
+    },
+    {
+      "id": "joe13",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "easy",
+      "question": "Interface in Java is used to:",
+      "options": ["Store data", "Define contract", "Create DB", "Compile code"],
+      "correctAnswer": ["Define contract"],
+      "explanation": "Interface defines method contract."
+    },
+    {
+      "id": "joe14",
+      "type": "scenario",
+      "topic": "Java OOP",
+      "difficulty": "easy",
+      "question": "You want to hide internal data and expose getters/setters. Which principle?",
+      "correctAnswer": ["Encapsulation"],
+      "explanation": "Encapsulation uses private fields and public getters/setters."
+    },
+    {
+      "id": "joe15",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "easy",
+      "question": "Which keyword refers to current object?",
+      "options": ["this", "super", "self", "me"],
+      "correctAnswer": ["this"],
+      "explanation": "this refers to current object."
+    }
+  ]
+}

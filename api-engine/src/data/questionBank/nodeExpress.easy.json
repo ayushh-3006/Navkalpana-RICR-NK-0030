@@ -1,0 +1,155 @@
+{
+  "title": "Adaptive Quiz: Node.js + Express",
+  "topicFocus": "Node.js + Express",
+  "difficulty": "easy",
+  "timeLimitSec": 600,
+  "questions": [
+    {
+      "id": "ne1",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "easy",
+      "question": "Which command initializes a Node project?",
+      "options": ["node init", "npm init", "npm start", "node start"],
+      "correctAnswer": ["npm init"],
+      "explanation": "npm init creates package.json."
+    },
+    {
+      "id": "ne2",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "easy",
+      "question": "Express is mainly used to:",
+      "options": ["Build UI", "Build server APIs", "Design database", "Compile JS"],
+      "correctAnswer": ["Build server APIs"],
+      "explanation": "Express helps create web servers and REST APIs."
+    },
+    {
+      "id": "ne3",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "easy",
+      "question": "Which method is used to parse JSON body in Express?",
+      "options": ["app.use(json())", "express.json()", "bodyParser()", "express.parse()"],
+      "correctAnswer": ["express.json()"],
+      "explanation": "app.use(express.json()) parses JSON request bodies."
+    },
+    {
+      "id": "ne4",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "easy",
+      "question": "What is the default port commonly used in Node apps?",
+      "options": ["3000", "80", "21", "1433"],
+      "correctAnswer": ["3000"],
+      "explanation": "Many Node apps commonly use 3000 in development."
+    },
+    {
+      "id": "ne5",
+      "type": "short",
+      "topic": "Node.js + Express",
+      "difficulty": "easy",
+      "question": "What is middleware in Express (1 line)?",
+      "correctAnswer": ["A function that runs between request and response"],
+      "explanation": "Middleware can modify req/res or end the request cycle."
+    },
+    {
+      "id": "ne6",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "easy",
+      "question": "Which HTTP method is typically used to create data?",
+      "options": ["GET", "POST", "PUT", "DELETE"],
+      "correctAnswer": ["POST"],
+      "explanation": "POST is used to create new resources."
+    },
+    {
+      "id": "ne7",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "easy",
+      "question": "req.params is used to read:",
+      "options": ["Query string", "Route parameters", "Headers", "Cookies only"],
+      "correctAnswer": ["Route parameters"],
+      "explanation": "Route params come from URL path like /users/:id."
+    },
+    {
+      "id": "ne8",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "easy",
+      "question": "req.query is used to read:",
+      "options": ["Body data", "Query string", "Route params", "File uploads"],
+      "correctAnswer": ["Query string"],
+      "explanation": "Query string is /api?search=abc."
+    },
+    {
+      "id": "ne9",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "easy",
+      "question": "Which status code means 'Created'?",
+      "options": ["200", "201", "400", "500"],
+      "correctAnswer": ["201"],
+      "explanation": "201 indicates resource created successfully."
+    },
+    {
+      "id": "ne10",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "easy",
+      "question": "Which status code means 'Unauthorized'?",
+      "options": ["401", "403", "404", "409"],
+      "correctAnswer": ["401"],
+      "explanation": "401 means authentication required or invalid."
+    },
+    {
+      "id": "ne11",
+      "type": "scenario",
+      "topic": "Node.js + Express",
+      "difficulty": "easy",
+      "question": "You want to allow JSON requests from frontend. Which middleware is required?",
+      "correctAnswer": ["app.use(express.json())"],
+      "explanation": "It parses incoming JSON request bodies."
+    },
+    {
+      "id": "ne12",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "easy",
+      "question": "Which library is commonly used to restart server automatically in dev?",
+      "options": ["pm2", "nodemon", "bcrypt", "dotenv"],
+      "correctAnswer": ["nodemon"],
+      "explanation": "nodemon restarts server on file changes."
+    },
+    {
+      "id": "ne13",
+      "type": "short",
+      "topic": "Node.js + Express",
+      "difficulty": "easy",
+      "question": "What does CORS do (1 line)?",
+      "correctAnswer": ["Allows or restricts requests from different origins"],
+      "explanation": "CORS controls cross-origin requests."
+    },
+    {
+      "id": "ne14",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "easy",
+      "question": "To read env variables we commonly use:",
+      "options": ["nodemon", "dotenv", "mongoose", "axios"],
+      "correctAnswer": ["dotenv"],
+      "explanation": "dotenv loads .env into process.env."
+    },
+    {
+      "id": "ne15",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "easy",
+      "question": "Which method starts Express server?",
+      "options": ["app.start()", "app.listen()", "app.run()", "express.listen()"],
+      "correctAnswer": ["app.listen()"],
+      "explanation": "app.listen(port) starts server."
+    }
+  ]
+}

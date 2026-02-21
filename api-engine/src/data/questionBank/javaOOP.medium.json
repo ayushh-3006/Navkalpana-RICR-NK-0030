@@ -1,0 +1,153 @@
+{
+  "title": "Adaptive Quiz: Java OOP",
+  "topicFocus": "Java OOP",
+  "difficulty": "medium",
+  "timeLimitSec": 720,
+  "questions": [
+    {
+      "id": "jom1",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "medium",
+      "question": "Runtime polymorphism is achieved by:",
+      "options": ["Overloading", "Overriding", "Constructors", "Variables"],
+      "correctAnswer": ["Overriding"],
+      "explanation": "Runtime polymorphism happens via method overriding."
+    },
+    {
+      "id": "jom2",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "medium",
+      "question": "Which keyword is used to call parent constructor?",
+      "options": ["this()", "super()", "parent()", "base()"],
+      "correctAnswer": ["super()"],
+      "explanation": "super() calls parent constructor."
+    },
+    {
+      "id": "jom3",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "medium",
+      "question": "Which is TRUE about abstract methods?",
+      "options": ["Have body", "No body", "Static only", "Private only"],
+      "correctAnswer": ["No body"],
+      "explanation": "Abstract methods have no implementation."
+    },
+    {
+      "id": "jom4",
+      "type": "short",
+      "topic": "Java OOP",
+      "difficulty": "medium",
+      "question": "Difference between abstract class and interface (1 line)?",
+      "correctAnswer": ["Abstract class can have state + methods, interface is a contract (mostly methods)"],
+      "explanation": "Abstract can have fields; interface defines contract."
+    },
+    {
+      "id": "jom5",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "medium",
+      "question": "Which is NOT allowed in interface (Java 7)?",
+      "options": ["Abstract methods", "Public static final variables", "Method body", "Multiple inheritance"],
+      "correctAnswer": ["Method body"],
+      "explanation": "Before Java 8, interface methods had no body."
+    },
+    {
+      "id": "jom6",
+      "type": "scenario",
+      "topic": "Java OOP",
+      "difficulty": "medium",
+      "question": "You want one object to behave differently based on reference type. Which concept?",
+      "correctAnswer": ["Polymorphism"],
+      "explanation": "Same object behaves differently via polymorphism."
+    },
+    {
+      "id": "jom7",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "medium",
+      "question": "Constructor overloading means:",
+      "options": ["Same constructor signature", "Multiple constructors with different params", "No constructors", "Private constructors only"],
+      "correctAnswer": ["Multiple constructors with different params"],
+      "explanation": "Constructor overloading uses different param list."
+    },
+    {
+      "id": "jom8",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "medium",
+      "question": "What is upcasting?",
+      "options": ["Child to parent reference", "Parent to child reference", "Same class reference", "Object to primitive"],
+      "correctAnswer": ["Child to parent reference"],
+      "explanation": "Upcasting is casting child object to parent type."
+    },
+    {
+      "id": "jom9",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "medium",
+      "question": "What is downcasting?",
+      "options": ["Child to parent", "Parent to child", "int to long", "String to int"],
+      "correctAnswer": ["Parent to child"],
+      "explanation": "Downcasting casts parent reference to child type."
+    },
+    {
+      "id": "jom10",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "medium",
+      "question": "Which keyword prevents inheritance?",
+      "options": ["final", "static", "const", "sealed"],
+      "correctAnswer": ["final"],
+      "explanation": "final class cannot be extended."
+    },
+    {
+      "id": "jom11",
+      "type": "short",
+      "topic": "Java OOP",
+      "difficulty": "medium",
+      "question": "What is method signature?",
+      "correctAnswer": ["Method name + parameter types"],
+      "explanation": "Signature defines method uniqueness."
+    },
+    {
+      "id": "jom12",
+      "type": "scenario",
+      "topic": "Java OOP",
+      "difficulty": "medium",
+      "question": "You want to restrict object creation. What can you do?",
+      "correctAnswer": ["Make constructor private and provide factory method"],
+      "explanation": "Private constructor restricts new keyword usage."
+    },
+    {
+      "id": "jom13",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "medium",
+      "question": "What is composition?",
+      "options": ["Has-a relationship", "Is-a relationship", "Only inheritance", "Only polymorphism"],
+      "correctAnswer": ["Has-a relationship"],
+      "explanation": "Composition represents has-a relationship."
+    },
+    {
+      "id": "jom14",
+      "type": "mcq_single",
+      "topic": "Java OOP",
+      "difficulty": "medium",
+      "question": "If a method is static, it can be:",
+      "options": ["Overridden", "Overloaded", "Both", "Neither"],
+      "correctAnswer": ["Overloaded"],
+      "explanation": "Static methods cannot be overridden but can be overloaded."
+    },
+    {
+      "id": "jom15",
+      "type": "scenario",
+      "topic": "Java OOP",
+      "difficulty": "medium",
+      "question": "You want to reuse code but avoid deep inheritance. Which approach?",
+      "correctAnswer": ["Prefer composition over inheritance"],
+      "explanation": "Composition is more flexible than inheritance."
+    }
+  ]
+}

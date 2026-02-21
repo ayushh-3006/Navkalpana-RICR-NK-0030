@@ -1,0 +1,150 @@
+{
+  "title": "Adaptive Quiz: Node.js + Express",
+  "topicFocus": "Node.js + Express",
+  "difficulty": "hard",
+  "timeLimitSec": 900,
+  "questions": [
+    {
+      "id": "nh1",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "hard",
+      "question": "Why should you avoid blocking code in Node.js?",
+      "options": ["It increases CSS load", "It blocks event loop and slows all requests", "It improves performance", "It increases DB speed"],
+      "correctAnswer": ["It blocks event loop and slows all requests"],
+      "explanation": "Blocking operations freeze the event loop."
+    },
+    {
+      "id": "nh2",
+      "type": "short",
+      "topic": "Node.js + Express",
+      "difficulty": "hard",
+      "question": "Explain event loop in 1 line.",
+      "correctAnswer": ["It handles async callbacks and non-blocking I/O in Node.js"],
+      "explanation": "Event loop is core of Node's async behavior."
+    },
+    {
+      "id": "nh3",
+      "type": "scenario",
+      "topic": "Node.js + Express",
+      "difficulty": "hard",
+      "question": "Your API is slow due to repeated DB calls. What can you add?",
+      "correctAnswer": ["Caching layer (Redis) or in-memory cache"],
+      "explanation": "Caching reduces repeated DB hits."
+    },
+    {
+      "id": "nh4",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "hard",
+      "question": "Which pattern is best for scaling Node API on multi-core CPU?",
+      "options": ["Single thread only", "Cluster mode", "Stop using Express", "Disable async"],
+      "correctAnswer": ["Cluster mode"],
+      "explanation": "Cluster uses multiple processes across cores."
+    },
+    {
+      "id": "nh5",
+      "type": "mcq_multi",
+      "topic": "Node.js + Express",
+      "difficulty": "hard",
+      "question": "Which improve API security?",
+      "options": ["helmet", "rate limiting", "allow all origins", "input validation"],
+      "correctAnswer": ["helmet", "rate limiting", "input validation"],
+      "explanation": "These protect headers, brute force, and invalid payloads."
+    },
+    {
+      "id": "nh6",
+      "type": "scenario",
+      "topic": "Node.js + Express",
+      "difficulty": "hard",
+      "question": "How would you implement rate limiting in Express?",
+      "correctAnswer": ["Use express-rate-limit middleware"],
+      "explanation": "Rate limit middleware prevents abuse."
+    },
+    {
+      "id": "nh7",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "hard",
+      "question": "What is idempotent request?",
+      "options": ["Always changes state", "Same request gives same result", "Only POST", "Only GET"],
+      "correctAnswer": ["Same request gives same result"],
+      "explanation": "PUT/DELETE should be idempotent."
+    },
+    {
+      "id": "nh8",
+      "type": "short",
+      "topic": "Node.js + Express",
+      "difficulty": "hard",
+      "question": "What is CSRF in 1 line?",
+      "correctAnswer": ["Attack where unauthorized actions are performed using victim session"],
+      "explanation": "CSRF exploits authenticated user sessions."
+    },
+    {
+      "id": "nh9",
+      "type": "scenario",
+      "topic": "Node.js + Express",
+      "difficulty": "hard",
+      "question": "You want to stop server crash on errors. What should you do?",
+      "correctAnswer": ["Use centralized error middleware + proper try/catch in async"],
+      "explanation": "Error middleware prevents unhandled errors."
+    },
+    {
+      "id": "nh10",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "hard",
+      "question": "What is the benefit of using a reverse proxy (Nginx) in front of Node?",
+      "options": ["More CSS", "Load balancing and TLS termination", "Stops DB", "No benefit"],
+      "correctAnswer": ["Load balancing and TLS termination"],
+      "explanation": "Reverse proxy can handle SSL and load balance."
+    },
+    {
+      "id": "nh11",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "hard",
+      "question": "Which is a common approach to version REST APIs?",
+      "options": ["/v1/...", "/apiV1", "No versioning", "Only query params"],
+      "correctAnswer": ["/v1/..."],
+      "explanation": "Path versioning is common like /api/v1/users."
+    },
+    {
+      "id": "nh12",
+      "type": "scenario",
+      "topic": "Node.js + Express",
+      "difficulty": "hard",
+      "question": "How do you safely handle file uploads in Express?",
+      "correctAnswer": ["Validate file type/size and store securely with multer"],
+      "explanation": "Validation and secure storage is necessary."
+    },
+    {
+      "id": "nh13",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "hard",
+      "question": "Which is recommended for production process manager?",
+      "options": ["nodemon", "pm2", "dotenv", "morgan"],
+      "correctAnswer": ["pm2"],
+      "explanation": "PM2 manages Node processes in production."
+    },
+    {
+      "id": "nh14",
+      "type": "short",
+      "topic": "Node.js + Express",
+      "difficulty": "hard",
+      "question": "Difference between process and thread (1 line)?",
+      "correctAnswer": ["Process has its own memory, thread shares memory within process"],
+      "explanation": "Processes are isolated; threads share memory."
+    },
+    {
+      "id": "nh15",
+      "type": "scenario",
+      "topic": "Node.js + Express",
+      "difficulty": "hard",
+      "question": "How to validate request body in a clean way?",
+      "correctAnswer": ["Use schema validation like Zod/Joi middleware"],
+      "explanation": "Schema validation keeps code clean and safe."
+    }
+  ]
+}

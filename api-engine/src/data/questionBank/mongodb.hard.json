@@ -1,0 +1,150 @@
+{
+  "title": "Adaptive Quiz: MongoDB Basics",
+  "topicFocus": "MongoDB",
+  "difficulty": "hard",
+  "timeLimitSec": 900,
+  "questions": [
+    {
+      "id": "moh1",
+      "type": "scenario",
+      "topic": "MongoDB",
+      "difficulty": "hard",
+      "question": "Your query is slow on large collection. First optimization step?",
+      "correctAnswer": ["Create index on frequently filtered fields"],
+      "explanation": "Indexing is the primary optimization for query performance."
+    },
+    {
+      "id": "moh2",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "hard",
+      "question": "Which tool shows query execution plan?",
+      "options": ["explain()", "analyze()", "trace()", "plan()"],
+      "correctAnswer": ["explain()"],
+      "explanation": "explain() provides query plan details."
+    },
+    {
+      "id": "moh3",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "hard",
+      "question": "What does $lookup do?",
+      "options": ["Filters docs", "Joins collections", "Deletes docs", "Creates index"],
+      "correctAnswer": ["Joins collections"],
+      "explanation": "$lookup performs join-like operation."
+    },
+    {
+      "id": "moh4",
+      "type": "short",
+      "topic": "MongoDB",
+      "difficulty": "hard",
+      "question": "When use embedding vs referencing?",
+      "correctAnswer": ["Embed for fast reads, reference for large/independent data"],
+      "explanation": "Embedding improves read; referencing avoids duplication."
+    },
+    {
+      "id": "moh5",
+      "type": "scenario",
+      "topic": "MongoDB",
+      "difficulty": "hard",
+      "question": "How to implement transaction in MongoDB?",
+      "correctAnswer": ["Use session.startTransaction() in replica set"],
+      "explanation": "Transactions require sessions and replica set/sharded clusters."
+    },
+    {
+      "id": "moh6",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "hard",
+      "question": "Which index type supports geospatial queries?",
+      "options": ["text", "2dsphere", "hash", "ttl"],
+      "correctAnswer": ["2dsphere"],
+      "explanation": "2dsphere supports geo queries."
+    },
+    {
+      "id": "moh7",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "hard",
+      "question": "TTL index is used for:",
+      "options": ["Text search", "Auto delete after time", "Faster joins", "Unique constraints"],
+      "correctAnswer": ["Auto delete after time"],
+      "explanation": "TTL deletes documents after expiration."
+    },
+    {
+      "id": "moh8",
+      "type": "scenario",
+      "topic": "MongoDB",
+      "difficulty": "hard",
+      "question": "How to prevent duplicate records for unique field?",
+      "correctAnswer": ["Create unique index and handle duplicate key error"],
+      "explanation": "Unique index ensures no duplicates."
+    },
+    {
+      "id": "moh9",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "hard",
+      "question": "What is write concern?",
+      "options": ["Query filter", "Write acknowledgment level", "Read speed", "Aggregation stage"],
+      "correctAnswer": ["Write acknowledgment level"],
+      "explanation": "Write concern determines write durability."
+    },
+    {
+      "id": "moh10",
+      "type": "short",
+      "topic": "MongoDB",
+      "difficulty": "hard",
+      "question": "Explain replication in 1 line.",
+      "correctAnswer": ["Copies data across multiple servers for high availability"],
+      "explanation": "Replication ensures redundancy."
+    },
+    {
+      "id": "moh11",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "hard",
+      "question": "Sharding is used for:",
+      "options": ["Security", "Horizontal scaling", "UI speed", "Password hashing"],
+      "correctAnswer": ["Horizontal scaling"],
+      "explanation": "Sharding distributes data across shards."
+    },
+    {
+      "id": "moh12",
+      "type": "scenario",
+      "topic": "MongoDB",
+      "difficulty": "hard",
+      "question": "How to optimize aggregation pipeline?",
+      "correctAnswer": ["Use $match early and project only required fields"],
+      "explanation": "Early filtering reduces pipeline workload."
+    },
+    {
+      "id": "moh13",
+      "type": "mcq_multi",
+      "topic": "MongoDB",
+      "difficulty": "hard",
+      "question": "Which help performance?",
+      "options": ["Indexes", "Projection", "Using $where always", "Pagination"],
+      "correctAnswer": ["Indexes", "Projection", "Pagination"],
+      "explanation": "$where is slow; others help performance."
+    },
+    {
+      "id": "moh14",
+      "type": "short",
+      "topic": "MongoDB",
+      "difficulty": "hard",
+      "question": "What is CAP theorem (1 line)?",
+      "correctAnswer": ["Consistency, Availability, Partition tolerance - pick 2 in network partition"],
+      "explanation": "CAP explains tradeoffs in distributed systems."
+    },
+    {
+      "id": "moh15",
+      "type": "scenario",
+      "topic": "MongoDB",
+      "difficulty": "hard",
+      "question": "How to handle large file storage in MongoDB?",
+      "correctAnswer": ["Use GridFS or store in cloud and save URL"],
+      "explanation": "GridFS is for large files; URL storage common."
+    }
+  ]
+}

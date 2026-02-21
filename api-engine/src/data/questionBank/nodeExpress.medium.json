@@ -1,0 +1,153 @@
+{
+  "title": "Adaptive Quiz: Node.js + Express",
+  "topicFocus": "Node.js + Express",
+  "difficulty": "medium",
+  "timeLimitSec": 720,
+  "questions": [
+    {
+      "id": "nm1",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "medium",
+      "question": "What is the correct order in Express request lifecycle?",
+      "options": ["Route -> Middleware -> Response", "Middleware -> Route -> Response", "Response -> Middleware -> Route", "Route -> Response -> Middleware"],
+      "correctAnswer": ["Middleware -> Route -> Response"],
+      "explanation": "Middleware runs before route handler unless ended early."
+    },
+    {
+      "id": "nm2",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "medium",
+      "question": "Which is best for centralized error handling in Express?",
+      "options": ["try/catch everywhere", "Error-handling middleware", "Console logs", "Only res.send"],
+      "correctAnswer": ["Error-handling middleware"],
+      "explanation": "Express supports error middleware with (err, req, res, next)."
+    },
+    {
+      "id": "nm3",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "medium",
+      "question": "What does next() do in middleware?",
+      "options": ["Ends response", "Moves to next middleware/handler", "Restarts server", "Parses JSON"],
+      "correctAnswer": ["Moves to next middleware/handler"],
+      "explanation": "next() passes control forward."
+    },
+    {
+      "id": "nm4",
+      "type": "scenario",
+      "topic": "Node.js + Express",
+      "difficulty": "medium",
+      "question": "You need to protect a route using JWT. Where to verify token?",
+      "correctAnswer": ["In auth middleware before controller"],
+      "explanation": "Auth middleware verifies token and attaches user."
+    },
+    {
+      "id": "nm5",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "medium",
+      "question": "Which status code for validation error is best?",
+      "options": ["200", "201", "400", "500"],
+      "correctAnswer": ["400"],
+      "explanation": "400 indicates client bad request/validation issue."
+    },
+    {
+      "id": "nm6",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "medium",
+      "question": "What is the purpose of express.Router()?",
+      "options": ["Connect DB", "Group routes into modules", "Create React routes", "Hash password"],
+      "correctAnswer": ["Group routes into modules"],
+      "explanation": "Router helps modular route structure."
+    },
+    {
+      "id": "nm7",
+      "type": "short",
+      "topic": "Node.js + Express",
+      "difficulty": "medium",
+      "question": "What is REST API (1 line)?",
+      "correctAnswer": ["Standard way to build web APIs using HTTP methods"],
+      "explanation": "REST uses GET/POST/PUT/DELETE with resources."
+    },
+    {
+      "id": "nm8",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "medium",
+      "question": "Which Express middleware helps secure HTTP headers?",
+      "options": ["helmet", "cors", "morgan", "bcrypt"],
+      "correctAnswer": ["helmet"],
+      "explanation": "helmet adds secure headers."
+    },
+    {
+      "id": "nm9",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "medium",
+      "question": "What is the difference between PUT and PATCH?",
+      "options": ["Both same", "PUT replaces, PATCH updates partially", "PATCH replaces, PUT partial", "Neither updates"],
+      "correctAnswer": ["PUT replaces, PATCH updates partially"],
+      "explanation": "PUT is full replace, PATCH partial update."
+    },
+    {
+      "id": "nm10",
+      "type": "scenario",
+      "topic": "Node.js + Express",
+      "difficulty": "medium",
+      "question": "You want to log all requests (method + url). Which tool is common?",
+      "correctAnswer": ["morgan middleware"],
+      "explanation": "morgan is a popular HTTP request logger."
+    },
+    {
+      "id": "nm11",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "medium",
+      "question": "Which object contains headers in Express?",
+      "options": ["req.headers", "req.params", "req.query", "req.body"],
+      "correctAnswer": ["req.headers"],
+      "explanation": "Headers are available in req.headers."
+    },
+    {
+      "id": "nm12",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "medium",
+      "question": "Which status code for forbidden access (logged-in but no permission)?",
+      "options": ["401", "403", "404", "409"],
+      "correctAnswer": ["403"],
+      "explanation": "403 indicates forbidden."
+    },
+    {
+      "id": "nm13",
+      "type": "short",
+      "topic": "Node.js + Express",
+      "difficulty": "medium",
+      "question": "Why use async/await in controllers?",
+      "correctAnswer": ["To handle async operations cleanly and avoid callback hell"],
+      "explanation": "Async/await simplifies promise handling."
+    },
+    {
+      "id": "nm14",
+      "type": "mcq_single",
+      "topic": "Node.js + Express",
+      "difficulty": "medium",
+      "question": "What does res.status(200).json({}) do?",
+      "options": ["Sets cookie", "Sends JSON with status code", "Redirects", "Throws error"],
+      "correctAnswer": ["Sends JSON with status code"],
+      "explanation": "It sends JSON response with set status."
+    },
+    {
+      "id": "nm15",
+      "type": "scenario",
+      "topic": "Node.js + Express",
+      "difficulty": "medium",
+      "question": "Where should you keep route-level validation logic?",
+      "correctAnswer": ["Middleware or validation layer before controller"],
+      "explanation": "Keeps controllers clean and reusable."
+    }
+  ]
+}

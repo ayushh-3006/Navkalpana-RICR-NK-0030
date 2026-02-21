@@ -1,0 +1,150 @@
+{
+  "title": "Adaptive Quiz: React Hooks",
+  "topicFocus": "React Hooks",
+  "difficulty": "hard",
+  "timeLimitSec": 900,
+  "questions": [
+    {
+      "id": "h1",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "hard",
+      "question": "What is stale closure problem?",
+      "options": ["State lagging issue", "Incorrect closure capturing old value", "Memory leak", "Async error"],
+      "correctAnswer": ["Incorrect closure capturing old value"],
+      "explanation": "Closures capture old state values."
+    },
+    {
+      "id": "h2",
+      "type": "short",
+      "topic": "React Hooks",
+      "difficulty": "hard",
+      "question": "How do you prevent stale state in useEffect?",
+      "correctAnswer": ["Add correct dependencies"],
+      "explanation": "Correct dependency array avoids stale values."
+    },
+    {
+      "id": "h3",
+      "type": "mcq_multi",
+      "topic": "React Hooks",
+      "difficulty": "hard",
+      "question": "Which cause unnecessary re-renders?",
+      "options": ["Inline functions", "Memoized components", "Context changes", "Primitive state updates"],
+      "correctAnswer": ["Inline functions", "Context changes"],
+      "explanation": "New function references trigger renders."
+    },
+    {
+      "id": "h4",
+      "type": "scenario",
+      "topic": "React Hooks",
+      "difficulty": "hard",
+      "question": "When would you use useLayoutEffect?",
+      "correctAnswer": ["When DOM mutation must happen before paint"],
+      "explanation": "useLayoutEffect runs synchronously after DOM update."
+    },
+    {
+      "id": "h5",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "hard",
+      "question": "Which hook can replace Redux in small apps?",
+      "options": ["useReducer + useContext", "useMemo", "useRef", "useEffect"],
+      "correctAnswer": ["useReducer + useContext"],
+      "explanation": "Combination can manage global state."
+    },
+    {
+      "id": "h6",
+      "type": "code_output",
+      "topic": "React Hooks",
+      "difficulty": "hard",
+      "question": "If useEffect dependency is missing state, what happens?",
+      "correctAnswer": ["Effect may use stale value"],
+      "explanation": "Missing dependency causes stale closure."
+    },
+    {
+      "id": "h7",
+      "type": "short",
+      "topic": "React Hooks",
+      "difficulty": "hard",
+      "question": "Explain useCallback with example (1 line).",
+      "correctAnswer": ["Memoizes function to avoid recreation"],
+      "explanation": "Used to optimize child re-renders."
+    },
+    {
+      "id": "h8",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "hard",
+      "question": "What happens if you violate Rules of Hooks?",
+      "options": ["Compile error", "Runtime unpredictable behavior", "Nothing", "Warning only"],
+      "correctAnswer": ["Runtime unpredictable behavior"],
+      "explanation": "Hooks order must remain consistent."
+    },
+    {
+      "id": "h9",
+      "type": "scenario",
+      "topic": "React Hooks",
+      "difficulty": "hard",
+      "question": "How to optimize large lists rendering?",
+      "correctAnswer": ["React.memo + useMemo + virtualization"],
+      "explanation": "Memoization improves performance."
+    },
+    {
+      "id": "h10",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "hard",
+      "question": "Which hook runs synchronously after DOM mutation?",
+      "options": ["useEffect", "useLayoutEffect", "useMemo", "useReducer"],
+      "correctAnswer": ["useLayoutEffect"],
+      "explanation": "useLayoutEffect runs before paint."
+    },
+    {
+      "id": "h11",
+      "type": "short",
+      "topic": "React Hooks",
+      "difficulty": "hard",
+      "question": "Why avoid heavy logic inside render?",
+      "correctAnswer": ["It slows re-render performance"],
+      "explanation": "Heavy logic should be memoized."
+    },
+    {
+      "id": "h12",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "hard",
+      "question": "Which hook handles lazy initialization?",
+      "options": ["useState with function", "useMemo", "useEffect", "useRef"],
+      "correctAnswer": ["useState with function"],
+      "explanation": "useState can take initializer function."
+    },
+    {
+      "id": "h13",
+      "type": "mcq_multi",
+      "topic": "React Hooks",
+      "difficulty": "hard",
+      "question": "Which hooks help performance?",
+      "options": ["useMemo", "useCallback", "useEffect", "React.memo"],
+      "correctAnswer": ["useMemo", "useCallback", "React.memo"],
+      "explanation": "All optimize renders."
+    },
+    {
+      "id": "h14",
+      "type": "short",
+      "topic": "React Hooks",
+      "difficulty": "hard",
+      "question": "Explain batching in React.",
+      "correctAnswer": ["React groups state updates for performance"],
+      "explanation": "Batching reduces re-renders."
+    },
+    {
+      "id": "h15",
+      "type": "scenario",
+      "topic": "React Hooks",
+      "difficulty": "hard",
+      "question": "How to cancel API request in useEffect?",
+      "correctAnswer": ["Use AbortController in cleanup"],
+      "explanation": "Cleanup function cancels request."
+    }
+  ]
+}

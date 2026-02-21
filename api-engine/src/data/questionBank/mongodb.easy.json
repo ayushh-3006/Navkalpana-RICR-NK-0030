@@ -1,0 +1,155 @@
+{
+  "title": "Adaptive Quiz: MongoDB Basics",
+  "topicFocus": "MongoDB",
+  "difficulty": "easy",
+  "timeLimitSec": 600,
+  "questions": [
+    {
+      "id": "moe1",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "easy",
+      "question": "MongoDB is a:",
+      "options": ["Relational DB", "NoSQL DB", "File system", "Compiler"],
+      "correctAnswer": ["NoSQL DB"],
+      "explanation": "MongoDB is a document-based NoSQL database."
+    },
+    {
+      "id": "moe2",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "easy",
+      "question": "In MongoDB, data is stored as:",
+      "options": ["Rows", "Tables", "Documents", "Sheets"],
+      "correctAnswer": ["Documents"],
+      "explanation": "MongoDB stores JSON-like documents."
+    },
+    {
+      "id": "moe3",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "easy",
+      "question": "What is a collection?",
+      "options": ["Group of documents", "Group of tables", "Group of rows", "Group of schemas"],
+      "correctAnswer": ["Group of documents"],
+      "explanation": "Collection is similar to table in SQL."
+    },
+    {
+      "id": "moe4",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "easy",
+      "question": "Default unique identifier field is:",
+      "options": ["id", "_id", "uid", "key"],
+      "correctAnswer": ["_id"],
+      "explanation": "MongoDB auto creates _id."
+    },
+    {
+      "id": "moe5",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "easy",
+      "question": "Which query finds all documents?",
+      "options": ["findAll()", "find()", "select()", "scan()"],
+      "correctAnswer": ["find()"],
+      "explanation": "db.collection.find() returns documents."
+    },
+    {
+      "id": "moe6",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "easy",
+      "question": "Which command inserts one document?",
+      "options": ["insertOne", "addOne", "pushOne", "createOne"],
+      "correctAnswer": ["insertOne"],
+      "explanation": "insertOne inserts single document."
+    },
+    {
+      "id": "moe7",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "easy",
+      "question": "Which command updates documents?",
+      "options": ["updateOne/updateMany", "edit", "modify", "change"],
+      "correctAnswer": ["updateOne/updateMany"],
+      "explanation": "MongoDB uses updateOne/updateMany."
+    },
+    {
+      "id": "moe8",
+      "type": "short",
+      "topic": "MongoDB",
+      "difficulty": "easy",
+      "question": "What is an index (1 line)?",
+      "correctAnswer": ["A structure that improves query speed"],
+      "explanation": "Indexes speed up searches."
+    },
+    {
+      "id": "moe9",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "easy",
+      "question": "Mongoose is used for:",
+      "options": ["Frontend UI", "MongoDB ODM in Node", "SQL joins", "Authentication"],
+      "correctAnswer": ["MongoDB ODM in Node"],
+      "explanation": "Mongoose maps schema/model to MongoDB."
+    },
+    {
+      "id": "moe10",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "easy",
+      "question": "MongoDB document format is similar to:",
+      "options": ["XML", "JSON", "CSV", "YAML only"],
+      "correctAnswer": ["JSON"],
+      "explanation": "MongoDB stores BSON, similar to JSON."
+    },
+    {
+      "id": "moe11",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "easy",
+      "question": "Which operator matches equal value?",
+      "options": ["$eq", "$gt", "$lt", "$in"],
+      "correctAnswer": ["$eq"],
+      "explanation": "$eq means equal."
+    },
+    {
+      "id": "moe12",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "easy",
+      "question": "Which operator is used for greater than?",
+      "options": ["$gt", "$eq", "$lte", "$or"],
+      "correctAnswer": ["$gt"],
+      "explanation": "$gt means greater than."
+    },
+    {
+      "id": "moe13",
+      "type": "scenario",
+      "topic": "MongoDB",
+      "difficulty": "easy",
+      "question": "You want to delete a document by _id. Which command?",
+      "correctAnswer": ["deleteOne({ _id: ... })"],
+      "explanation": "deleteOne removes a single matching document."
+    },
+    {
+      "id": "moe14",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "easy",
+      "question": "Which command sorts results?",
+      "options": ["sort()", "order()", "arrange()", "rank()"],
+      "correctAnswer": ["sort()"],
+      "explanation": "sort() sorts query result."
+    },
+    {
+      "id": "moe15",
+      "type": "short",
+      "topic": "MongoDB",
+      "difficulty": "easy",
+      "question": "What is aggregation (1 line)?",
+      "correctAnswer": ["Pipeline-based data processing for analytics"],
+      "explanation": "Aggregation pipeline performs grouping, filtering, etc."
+    }
+  ]
+}

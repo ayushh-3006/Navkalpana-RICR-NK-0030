@@ -6,6 +6,7 @@ import cors from "cors";
 import connectDB from "./src/config/db.js";
 import AuthRouter from "./src/routes/authRouter.js";
 import resumeRoutes from "./src/routes/resume.routes.js";
+import quizRoutes from "./src/routes/quizRoutes.js";
 
 connectDB();
 
@@ -22,6 +23,9 @@ app.use(express.json({ limit: "2mb" }));
 
 app.use("/auth", AuthRouter);
 app.use("/api/resume", resumeRoutes);
+
+
+app.use("/api/quiz", quizRoutes);
 
 app.get("/", (req, res) => res.send("Server running & DB connected ✅"));
 

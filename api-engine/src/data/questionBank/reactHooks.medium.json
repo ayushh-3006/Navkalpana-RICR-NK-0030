@@ -1,0 +1,152 @@
+{
+  "title": "Adaptive Quiz: React Hooks",
+  "topicFocus": "React Hooks",
+  "difficulty": "medium",
+  "timeLimitSec": 720,
+  "questions": [
+    {
+      "id": "m1",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "medium",
+      "question": "What happens if you update state directly without using setState?",
+      "options": ["Component re-renders", "Nothing changes", "Unexpected behavior", "App crashes"],
+      "correctAnswer": ["Unexpected behavior"],
+      "explanation": "State must be updated using setter to trigger proper render."
+    },
+    {
+      "id": "m2",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "medium",
+      "question": "Which hook is used to memoize a function?",
+      "options": ["useMemo", "useCallback", "useRef", "useEffect"],
+      "correctAnswer": ["useCallback"],
+      "explanation": "useCallback memoizes functions."
+    },
+    {
+      "id": "m3",
+      "type": "mcq_multi",
+      "topic": "React Hooks",
+      "difficulty": "medium",
+      "question": "Which are valid React Hooks?",
+      "options": ["useState", "useReducer", "useHistory", "useEffect"],
+      "correctAnswer": ["useState", "useReducer", "useEffect"],
+      "explanation": "useHistory is from react-router."
+    },
+    {
+      "id": "m4",
+      "type": "short",
+      "topic": "React Hooks",
+      "difficulty": "medium",
+      "question": "Difference between useMemo and useCallback?",
+      "correctAnswer": ["useMemo memoizes values, useCallback memoizes functions"],
+      "explanation": "useMemo returns value, useCallback returns function."
+    },
+    {
+      "id": "m5",
+      "type": "scenario",
+      "topic": "React Hooks",
+      "difficulty": "medium",
+      "question": "Why do we pass dependency array in useEffect?",
+      "correctAnswer": ["To control when effect runs"],
+      "explanation": "Dependency array prevents unnecessary runs."
+    },
+    {
+      "id": "m6",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "medium",
+      "question": "Which hook replaces complex state logic?",
+      "options": ["useMemo", "useRef", "useReducer", "useState"],
+      "correctAnswer": ["useReducer"],
+      "explanation": "useReducer handles complex state transitions."
+    },
+    {
+      "id": "m7",
+      "type": "short",
+      "topic": "React Hooks",
+      "difficulty": "medium",
+      "question": "What is cleanup function in useEffect?",
+      "correctAnswer": ["Function returned from effect to clean side effects"],
+      "explanation": "Used to clean subscriptions or timers."
+    },
+    {
+      "id": "m8",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "medium",
+      "question": "When does cleanup run?",
+      "options": ["Before re-run", "After render", "On mount", "Never"],
+      "correctAnswer": ["Before re-run"],
+      "explanation": "Cleanup runs before next effect execution."
+    },
+    {
+      "id": "m9",
+      "type": "code_output",
+      "topic": "React Hooks",
+      "difficulty": "medium",
+      "question": "What will useState(0) return?",
+      "correctAnswer": ["An array with state and setter"],
+      "explanation": "useState returns [value, setValue]."
+    },
+    {
+      "id": "m10",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "medium",
+      "question": "Which hook avoids prop drilling?",
+      "options": ["useState", "useContext", "useMemo", "useRef"],
+      "correctAnswer": ["useContext"],
+      "explanation": "useContext shares state globally."
+    },
+    {
+      "id": "m11",
+      "type": "short",
+      "topic": "React Hooks",
+      "difficulty": "medium",
+      "question": "Why use useRef instead of useState?",
+      "correctAnswer": ["To store mutable value without re-render"],
+      "explanation": "useRef does not trigger re-render."
+    },
+    {
+      "id": "m12",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "medium",
+      "question": "Which hook handles performance optimization?",
+      "options": ["useState", "useMemo", "useEffect", "useReducer"],
+      "correctAnswer": ["useMemo"],
+      "explanation": "useMemo caches expensive computations."
+    },
+    {
+      "id": "m13",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "medium",
+      "question": "What happens if dependency array is incorrect?",
+      "options": ["Infinite loop", "Nothing", "App crash", "Component unmount"],
+      "correctAnswer": ["Infinite loop"],
+      "explanation": "Wrong dependencies can cause infinite re-renders."
+    },
+    {
+      "id": "m14",
+      "type": "scenario",
+      "topic": "React Hooks",
+      "difficulty": "medium",
+      "question": "When should you use useReducer instead of useState?",
+      "correctAnswer": ["When state logic is complex"],
+      "explanation": "useReducer better for complex updates."
+    },
+    {
+      "id": "m15",
+      "type": "mcq_single",
+      "topic": "React Hooks",
+      "difficulty": "medium",
+      "question": "Which hook is used for side effects?",
+      "options": ["useEffect", "useState", "useMemo", "useRef"],
+      "correctAnswer": ["useEffect"],
+      "explanation": "useEffect handles side effects."
+    }
+  ]
+}

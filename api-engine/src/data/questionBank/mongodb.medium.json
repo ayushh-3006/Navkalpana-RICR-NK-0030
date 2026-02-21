@@ -1,0 +1,153 @@
+{
+  "title": "Adaptive Quiz: MongoDB Basics",
+  "topicFocus": "MongoDB",
+  "difficulty": "medium",
+  "timeLimitSec": 720,
+  "questions": [
+    {
+      "id": "mom1",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "medium",
+      "question": "What does $in do?",
+      "options": ["Matches values in an array", "Sorts documents", "Deletes documents", "Creates collection"],
+      "correctAnswer": ["Matches values in an array"],
+      "explanation": "$in checks if field value is in given list."
+    },
+    {
+      "id": "mom2",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "medium",
+      "question": "Which method returns only one document?",
+      "options": ["find()", "findOne()", "selectOne()", "get()"],
+      "correctAnswer": ["findOne()"],
+      "explanation": "findOne returns first matched document."
+    },
+    {
+      "id": "mom3",
+      "type": "scenario",
+      "topic": "MongoDB",
+      "difficulty": "medium",
+      "question": "How to update multiple documents at once?",
+      "correctAnswer": ["updateMany(filter, update)"],
+      "explanation": "updateMany updates all matched docs."
+    },
+    {
+      "id": "mom4",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "medium",
+      "question": "What does $set do in update?",
+      "options": ["Deletes field", "Adds/updates field value", "Sorts results", "Creates index"],
+      "correctAnswer": ["Adds/updates field value"],
+      "explanation": "$set updates specified fields."
+    },
+    {
+      "id": "mom5",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "medium",
+      "question": "Which stage filters documents in aggregation?",
+      "options": ["$match", "$group", "$project", "$sort"],
+      "correctAnswer": ["$match"],
+      "explanation": "$match filters documents."
+    },
+    {
+      "id": "mom6",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "medium",
+      "question": "Which stage selects fields in aggregation?",
+      "options": ["$match", "$group", "$project", "$lookup"],
+      "correctAnswer": ["$project"],
+      "explanation": "$project includes/excludes fields."
+    },
+    {
+      "id": "mom7",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "medium",
+      "question": "What does populate do in Mongoose?",
+      "options": ["Adds index", "Joins referenced docs", "Deletes docs", "Validates schema"],
+      "correctAnswer": ["Joins referenced docs"],
+      "explanation": "populate fetches referenced documents like join."
+    },
+    {
+      "id": "mom8",
+      "type": "short",
+      "topic": "MongoDB",
+      "difficulty": "medium",
+      "question": "Why use indexes?",
+      "correctAnswer": ["To speed up queries on frequently searched fields"],
+      "explanation": "Indexes improve read performance."
+    },
+    {
+      "id": "mom9",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "medium",
+      "question": "Which is NOT an aggregation stage?",
+      "options": ["$match", "$group", "$join", "$sort"],
+      "correctAnswer": ["$join"],
+      "explanation": "MongoDB uses $lookup not $join."
+    },
+    {
+      "id": "mom10",
+      "type": "scenario",
+      "topic": "MongoDB",
+      "difficulty": "medium",
+      "question": "How to ensure email field is unique in schema?",
+      "correctAnswer": ["Add unique: true in schema and create index"],
+      "explanation": "unique:true creates unique index."
+    },
+    {
+      "id": "mom11",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "medium",
+      "question": "What does $push do?",
+      "options": ["Adds item to array", "Removes item", "Updates all docs", "Sorts array"],
+      "correctAnswer": ["Adds item to array"],
+      "explanation": "$push appends value to array field."
+    },
+    {
+      "id": "mom12",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "medium",
+      "question": "What is a compound index?",
+      "options": ["Index on one field", "Index on multiple fields", "Index on arrays only", "Index on _id only"],
+      "correctAnswer": ["Index on multiple fields"],
+      "explanation": "Compound index uses multiple fields."
+    },
+    {
+      "id": "mom13",
+      "type": "mcq_single",
+      "topic": "MongoDB",
+      "difficulty": "medium",
+      "question": "Which stage groups documents?",
+      "options": ["$match", "$group", "$project", "$skip"],
+      "correctAnswer": ["$group"],
+      "explanation": "$group aggregates docs by key."
+    },
+    {
+      "id": "mom14",
+      "type": "scenario",
+      "topic": "MongoDB",
+      "difficulty": "medium",
+      "question": "How to paginate results?",
+      "correctAnswer": ["Use skip() and limit()"],
+      "explanation": "skip + limit is typical pagination."
+    },
+    {
+      "id": "mom15",
+      "type": "short",
+      "topic": "MongoDB",
+      "difficulty": "medium",
+      "question": "Explain BSON in 1 line.",
+      "correctAnswer": ["Binary JSON format used by MongoDB"],
+      "explanation": "MongoDB stores data as BSON."
+    }
+  ]
+}

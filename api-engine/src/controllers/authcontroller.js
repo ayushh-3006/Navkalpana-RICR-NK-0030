@@ -5,7 +5,9 @@ import jwt from "jsonwebtoken";
 // ========================= REGISTER =========================
 export const UserRegister = async (req, res, next) => {
   try {
-    const { fullName, email, mobileNumber, password, gender, role } = req.body;
+    // REGISTER
+    const { fullName, email, mobileNumber, password, gender, role } =
+      req.body || {};
 
     // Validation
     if (!fullName || !email || !mobileNumber || !password || !gender) {
@@ -58,7 +60,8 @@ export const UserRegister = async (req, res, next) => {
 // ========================= LOGIN =========================
 export const UserLogin = async (req, res, next) => {
   try {
-    const { email, password } = req.body;
+    // LOGIN
+const { email, password } = req.body || {};
 
     // Validation
     if (!email || !password) {
@@ -94,7 +97,7 @@ export const UserLogin = async (req, res, next) => {
         email: user.email,
       },
       process.env.JWT_SECRET,
-      { expiresIn: "7d" }
+      { expiresIn: "7d" },
     );
 
     return res.status(200).json({

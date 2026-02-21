@@ -1,42 +1,85 @@
 import jwt from "jsonwebtoken";
 import User from "../models/userModel.js";
 
-export const Protect = async (req, res, next) => {
+/**
+ * JWT Protect Middleware
+ * - Header: Authorization: Bearer <token>
+ * - Verify token & expiry
+ * - Attach user to req.user
+ */
+export const protect = async (req, res, next) => {
   try {
-    const token = req.cookies.parleG;
-    console.log(req.cookies);
-    
-    if (!token) return res.status(401).json({ message: "Unauthorized" });
+    const authHeader = req.headers.authorization;
 
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    const user = await User.findById(decoded.id);
-    if (!user) return res.status(401).json({ message: "Unauthorized" });
+    // Token missing
+    if (!authHeader || !authHeader.startsWith("Bearer ")) {
+      return res.status(401).json({
+        success: false,
+        message: "Unauthorized: Token missing",
+      });
+    }
 
+    const token = authHeader.split(" ")[1];
+
+    // Verify token (also checks expiry)
+    let decoded;
+    try {
+      decoded = jwt.verify(token, process.env.JWT_SECRET);
+    } catch (err) {
+      const msg =
+        err.name === "TokenExpiredError"
+          ? "Session expired: Please login again"
+          : "Unauthorized: Invalid token";
+
+      return res.status(401).json({
+        success: false,
+        message: msg,
+      });
+    }
+
+    // Your token payload includes `id`
+    if (!decoded?.id) {
+      return res.status(401).json({
+        success: false,
+        message: "Unauthorized: Invalid token payload",
+      });
+    }
+
+    // Get user from DB
+    const user = await User.findById(decoded.id).select("-password");
+    if (!user) {
+      return res.status(401).json({
+        success: false,
+        message: "Unauthorized: User not found",
+      });
+    }
+
+    // Attach to request
     req.user = user;
+    req.userId = user._id;
+    req.userRole = user.role;
+
     next();
-  } catch (err) {
-    console.log(err);
-    
-    res.status(401).json({ message: "Unauthorized" });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: "Auth middleware error",
+      error: error.message,
+    });
   }
 };
 
-export const OtpProtect = async (req, res, next) => {
-  try {
-    
-    const token = req.cookies.otpToken;
-    console.log(req);
-    if (!token) return res.status(401).json({ message: "Unauthorized OTP" });
-
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    const user = await User.findById(decoded.id);
-    
-    if (!user) return res.status(401).json({ message: "Unauthorized OTP" });
-
-    req.user = user;
+/**
+ * Role-based guard (optional)
+ */
+export const authorizeRoles = (...roles) => {
+  return (req, res, next) => {
+    if (!req.user || !roles.includes(req.user.role)) {
+      return res.status(403).json({
+        success: false,
+        message: "Forbidden: Access denied",
+      });
+    }
     next();
-  } catch (err) {
-    console.log(err);
-    res.status(401).json({ message: "Unauthorized OTP" });
-  }
+  };
 };
